@@ -5,7 +5,7 @@
   "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "detach": "rm -rf .git-test && git init"
+    "detach": "rm -rf .git && git init"
   },
   "author": "",
   "license": "ISC",
