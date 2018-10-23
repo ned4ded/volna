@@ -35,6 +35,7 @@ Default project has exact or similar structure:
 │       ├── generated
 │       ├── helpers
 │       ├── pages
+│       ├── vendor
 │       └── variables
 ├── tasks
 ├── gulpfile.babel.js
