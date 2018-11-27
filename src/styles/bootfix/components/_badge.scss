@@ -1,0 +1,9 @@
+.badge {
+  border-radius: 2px;
+}
+
+@each $color, $value in $colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}

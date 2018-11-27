@@ -1,0 +1,86 @@
+{% import "partials/side-nav.njk" as nav %}
+{% import "partials/breadcrumbs.njk" as bc %}
+{% import "blocks/profile.njk" as profile %}
+
+{% set site = datasets.get('site-map.json') %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="dashboard">
+    <nav class="dashboard__nav">
+      {{ nav.make('dashboard', site) }}
+    </nav>
+
+    <div class="dashboard__content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-12">
+            <div class="dashboard__breadcrumbs">
+              {{ bc.make(['Dashboard', 'Зарплаты менеджеров']) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          {% for item in range(4) %}
+          <div class="col-12 mb-3">
+            <div class="box pt-3 pb-3">
+              <div class="manager">
+                <div class="manager__block manager__block--profile">
+                  {{ profile.make('Александра', '25', 'manager') }}
+                </div>
+                <div class="manager__block manager__block--calculator">
+                  <p class="formula">
+                    <span class="text-lg formula__name">Премия:</span>
+                    <span class="formula__equation eq">
+                      <span class="eq-part eq-part-multi">
+                        <span class="eq-part eq-part-divide">
+                          <span class="eq-part eq-part-substr">
+                            <span class="eq-var"><select class="selectpicker" data-style="btn-secondary eq-select">
+                              <option value="volvo">Март 2018: 716257.24</option>
+                              <option value="saab">Март 2019: 716257.24</option>
+                              <option value="mercedes">Март 2020: 716257.24</option>
+                            </select></span>
+
+                            <span class="eq-sign">-</span>
+
+                            <span class="eq-var">2500000</span>
+                          </span>
+                          <span class="eq-var">6000</span>
+                        </span>
+                        <span class="eq-sign eq-sign-xl">x</span>
+                        <span class="eq-part eq-var"><input type="text" class="form-control eq-input" name="" value="5000"></span>
+                      </span>
+                    </span>
+
+                    <span class="formula__result">= 35000.00</span>
+                  </p>
+
+                  <p class="formula">
+                    <span class="text-lg formula__name">Итого:</span>
+                    <span class="formula__equation eq">
+                      <span class="eq-part eq-part-add">
+                        <span class="eq-part eq-var">35000.00</span>
+                        <span class="eq-sign eq-sign-space-sm">+</span>
+                        <span class="eq-part eq-var"><input type="text" class="form-control eq-input" name="" value="5000"></span>
+                      </span>
+                    </span>
+
+                    <span class="formula__result formula__result--highlight">= 85000.00</span>
+                  </p>
+                </div>
+                <div class="manager__block manager__block--schedule">
+                  <span class="manager__schedule">График</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

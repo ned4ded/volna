@@ -1,0 +1,89 @@
+// Read more https://developer.snapappointments.com/bootstrap-select/examples/
+
+
+// $color-red-error: rgb(185, 74, 72);
+// $color-green-success: #28a745;
+// $color-grey-arrow: rgba(204, 204, 204, 0.2);
+
+$width-default: 255px; // 3 960px-grid columns
+
+// $zindex-select-dropdown: 1060; // must be higher than a modal background (1050)
+
+// $input-color-placeholder: #999;
+// $input-alt-color-placeholder: rgba(255, 255, 255, 0.5);
+
+// $input-padding-y-sm: .25rem;
+// $input-padding-x-sm: .5rem;
+
+// $input-padding-y-lg: 0.5rem;
+// $input-padding-x-lg: 1rem;
+
+@import '../../../node_modules/bootstrap-select/sass/bootstrap-select.scss';
+
+.bootstrap-select {
+  $icon-width: 2.5rem;
+  $bg-color-active: darken($yiq-text-dark, 10%);
+
+  %custmized-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: $icon-width;
+    height: 100%;
+    margin: 0;
+
+    transform: rotate(0);
+
+    border: none;
+    background-color: $yiq-text-dark;
+    background-image: url('../assets/imgs/icon-select-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    @include transition($btn-transition);
+  }
+
+  .dropdown-toggle {
+    padding-right: $input-btn-padding-x + $icon-width;
+
+    &:after {
+      @extend %custmized-icon;
+    }
+
+    .filter-option-inner {
+      padding-right: 0;
+    }
+  }
+
+  &.dropup .dropdown-toggle:after {
+    @extend %custmized-icon;
+    transform: rotate(180deg);
+  }
+
+  &.show > .dropdown-toggle:after {
+    background-color: $bg-color-active;
+  }
+
+  &:not(.show) > .dropdown-toggle {
+    &:hover:after {
+      background-color: darken($yiq-text-dark, 7.5%);
+    }
+
+    &:active:after {
+      background-color: $bg-color-active;
+    }
+
+    &.disabled,
+    &:disabled {
+      opacity: $btn-disabled-opacity;
+    }
+  }
+
+  &.form-control {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,184 @@
+{% import "partials/side-nav.njk" as nav %}
+{% import "partials/breadcrumbs.njk" as bc %}
+{% set site = datasets.get('site-map.json') %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="dashboard">
+    <nav class="dashboard__nav">
+      {{ nav.make('orders', site) }}
+    </nav>
+
+    <div class="dashboard__content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="dashboard__breadcrumbs">
+              {{ bc.make(['Анализ продаж', 'Заказ для пользователя Владимир']) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-2 mb-2">
+          <div class="col-12">
+            <div class="box order__header">
+              <div class="order__header-block">
+                <h2 class="order__heading">Прокуратура <small>(Прокуратура)</small></h2>
+                <p><small class="d-inline-block pr-2">23.11.19 - 29.11.18</small><small><a href="#">ТТ132442145</a></small></p>
+              </div>
+              <form class="order__header-block order__header-block--inputs">
+                <div class="form-group">
+                  <label>Тип расчёта:</label>
+                  <select class="selectpicker form-control order__select" data-style="btn-secondary">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Тип расчёта:</label>
+                  <select class="selectpicker form-control order__select" data-style="btn-secondary">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Тип расчёта:</label>
+                  <select class="selectpicker form-control order__select" data-style="btn-secondary">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                  </select>
+                </div>
+              </form>
+              <div class="order__header-block order__header-block--about">
+                <div class="order__about-block">
+                  <p class="mb-3">Личные данные</p>
+                  <p class="mb-0"><a href="#">Артём Алексеевич, 5%</a></p>
+                </div>
+
+                <div class="order__about-block">
+                  <p class="mb-3">Фактический адрес:</p>
+                  <p class="mb-0"><a href="#">Москва, Хорошевское шоссе, 38д</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <table class="order__table table table-xs table-md-sm table-lg-md table-xl-default table-borderless">
+              <thead class="table-gutters-box">
+                <tr class="box text-nowrap font-weight-bold">
+                  <th>Ингредиенты</th>
+                  <th class="text-center">Цена</th>
+                  <th class="text-center">Остатки онлайн</th>
+                  <th class="text-center">1 нед.</th>
+                  <th class="text-center">2 нед.</th>
+                  <th class="text-center">1 мес.</th>
+                  <th class="text-center">Заказ</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td collspan="7" class="pt-0 pb-1">
+
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody class="table-bordered box table-gutters-box">
+                {% for item in ['','','',''] %}
+                <tr class="table-row-bordered">
+                  <td  class="align-middle">
+                    Кофе (В)
+                  </td>
+                  <td  class="align-middle text-center">
+                    2150.0
+                  </td>
+                  <td  class="align-middle text-center">
+                    2.48
+                  </td>
+                  <td class="table-cell-no-gutters">
+                    <table class="w-100 h-100">
+                      <tbody>
+                        <tr>
+                          <td class="w-50 text-center align-middle">10</td>
+                          <td class="w-50 text-center align-middle">55.13</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="table-cell-no-gutters">
+                    <table class="w-100 h-100">
+                      <tbody>
+                        <tr>
+                          <td class="w-50 text-center align-middle">20</td>
+                          <td class="w-50 text-center align-middle">55.13</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="table-cell-no-gutters">
+                    <table class="w-100 h-100">
+                      <tbody>
+                        <tr>
+                          <td class="w-50 text-center align-middle">44</td>
+                          <td class="w-50 text-center align-middle">55.13</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td>
+                    <div class="d-inline-flex justify-content-between w-100">
+                      <span class="btn btn-secondary mr-1 btn-w-auto w-50 order__value">5125</span>
+                      <span class="btn btn-secondary btn-w-auto w-50 order__value">118750.00</span>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+
+                <tr>
+                  <td colspan="3" class="table-cell-no-delimiter">
+                    Стоимость заказа:
+                  </td>
+                  <td class="text-center">
+                    800
+                  </td>
+                  <td class="text-center">
+                    1400.0
+                  </td>
+                  <td class="text-center">
+                    1400.0
+                  </td>
+                  <td class="text-center font-weight-bold text-primary">
+                    74537.0
+                  </td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <td colspan="7" class="pb-2"></td>
+                </tr>
+              </tbody>
+
+              <tbody>
+                <tr>
+                  <td colspan="6" class="table-cell-no-delimiter"></td>
+                  <td class="table-cell-no-gutters">
+                    <a href="#" class="btn btn-primary w-100">Сохранить</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

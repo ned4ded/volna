@@ -1,0 +1,11 @@
+{% macro make(name, age, job) %}
+<div class="profile">
+  <img src="#" alt="Manager description" class="profile__img" width="100" height="100">
+  <p class="profile__name">
+    {{ name }}, {{ age }}
+  </p>
+  <p>
+    <small class="text-muted">Статус:</small> <span class="badge badge-blue profile__badge font-weight-normal">{{ job }}</span>
+  </p>
+</div>
+{% endmacro %}

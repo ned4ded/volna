@@ -1,0 +1,19 @@
+.btn {
+  min-width: 200px * $cc;
+  // padding-top: calc(.025rem + #{ $btn-padding-y });
+  // padding-bottom: calc(#{ $btn-padding-y } - .025rem);
+
+  border-radius: 0;
+
+  &-w-auto {
+    min-width: auto;
+  }
+
+  &-rounded {
+    border-radius: $btn-border-radius;
+  }
+
+  &-circled {
+    border-radius: 25px * $cc;
+  }
+}

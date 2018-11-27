@@ -1,0 +1,23 @@
+.profile {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__img {
+    display: inline-block;
+
+    margin-bottom: map-get($spacers, 4);
+
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 100%;
+    background-color: gray('300');
+
+    font-size: 0;
+  }
+
+  &__badge {
+    min-width: 100px * $cc;
+  }
+}

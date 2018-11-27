@@ -1,0 +1,12 @@
+.icons {
+  display: inline-block;
+
+  &--w {
+    &--md {
+
+      @include media-breakpoint-up('lg') {
+        min-width: 150px * $cc;
+      }
+    }
+  }
+}

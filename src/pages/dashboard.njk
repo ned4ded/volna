@@ -1,0 +1,190 @@
+{% import "partials/side-nav.njk" as nav %}
+{% import "partials/breadcrumbs.njk" as bc %}
+{% set site = datasets.get('site-map.json') %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="dashboard">
+    <nav class="dashboard__nav">
+      {{ nav.make('dashboard', site) }}
+    </nav>
+
+    <div class="dashboard__content">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-12">
+            <div class="dashboard__breadcrumbs">
+              {{ bc.make(['Анализ продаж', 'Dashboard']) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <h1 class="d-inline-flex align-items-center"><span class="icon icon--pulse mr-2"></span>Dashboard</h1>
+          </div>
+          <div class="col-6 text-right">
+            <a href="#" class="btn btn-outline-primary btn-rounded">Показать всё</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <table class="table table-xs table-md-sm table-lg-md table-xl-default table-borderless table-gutters">
+              <thead class="">
+                <tr class="box large text-nowrap">
+                  <th scope="col" class="align-middle font-weight-light">Владелец</th>
+                  <th scope="col" class="align-middle font-weight-light">Точка продаж</th>
+                  <th scope="col">
+                    <table class="table small mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="align-middle font-weight-light w-50">Ингредиенты</th>
+                          <th scope="col" class="align-middle font-weight-light w-50">Стоимость</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </th>
+                  <th scope="col" class="align-middle font-weight-light">
+                    <table class="table table-no-delimiters table-narrow small mb-0">
+                      <tr>
+                        <th scope="col" colspan="3" class="align-middle font-weight-light text-center pt-0">Расчёт заказа</th>
+                      </tr>
+                      <tr class="text-center">
+                        <th scope="col" class="align-middle font-weight-lighter small pb-0 pt-0 w-33">7 дней</th>
+                        <th scope="col" class="align-middle font-weight-lighter small pb-0 pt-0 w-33">14 дней</th>
+                        <th scope="col" class="align-middle font-weight-lighter small pb-0 pt-0 w-33">Месяц</th>
+                      </tr>
+                    </table>
+                  </th>
+                  <th scope="col" class="align-middle font-weight-light">Остаток</th>
+                </tr>
+                <tr><td colspan="5" class="pt-0 pb-2"></td></tr>
+              </thead>
+              {% for item in ['','','','','','',''] %}
+              <tbody>
+                <tr class="box">
+                  <th scope="row">
+                    <p class="d-block text-muted">Максим</p>
+                    <p class="d-flex align-items-center text-muted small"><span class="icon icon--phone mr-2"></span>+7 (800) 322-33-11</p>
+                    <p class="d-flex align-items-center text-muted small"><span class="icon icon--email mr-2"></span>blv1221@mail.ru</p>
+                  </th>
+                  <td>
+                    <p class="font-weight-bold d-flex align-items-center">
+                      <a href="#" class="link-primary">Вкус вилл, Таганская, 31</a>
+                      {% if (loop.index === 2 or loop.index === 4) %}
+                      <span class="icon icon--diagram ml-2"></span>
+
+                      {% elif (loop.index === 3 or loop.index === 6) %}
+                      <span class="icon icon--layers ml-2"></span>
+
+                      {% elif (loop.index === 5) %}
+                      <span class="icon icon--rent ml-2"></span>
+
+                      {% else %}
+                      <span class="icon icon--group ml-2"></span>
+
+                      {% endif %}
+                    </p>
+                    <p class="small-xs text-muted font-weight-lighter">21.03.2018 -- 30.08.2018</p>
+                  </td>
+                  <td>
+                    <table class="table font-weight-lighter mb-0">
+                      <tbody>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small">
+                          <td class="w-50 align-middle">Кофе (В)</td>
+                          <td class="w-50 align-middle">255.5</td>
+                        </tr>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small">
+                          <td class="w-50 align-middle">Какао</td>
+                          <td class="w-50 align-middle">65.3</td>
+                        </tr>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small">
+                          <td class="w-50 align-middle">Вода</td>
+                          <td class="w-50 align-middle">33.1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td>
+                    <table class="table font-weight-lighter mb-0">
+                      <tbody>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small text-center">
+                          <td class="w-33">55.5</td>
+                          <td class="w-33">255.5</td>
+                          <td class="w-33">1255.5</td>
+                        </tr>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small text-center">
+                          <td class="w-33">55.5</td>
+                          <td class="w-33">255.5</td>
+                          <td class="w-33">1255.5</td>
+                        </tr>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small text-center">
+                          <td class="w-33">55.5</td>
+                          <td class="w-33">255.5</td>
+                          <td class="w-33">1255.5</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td>
+                    <table class="font-weight-light text-nowrap">
+                      <tbody>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small text-center text-primary">
+                          <td class="w-25">2.44 кг</td>
+                          <td class="w-25 table-cell-no-delimiter">47 дней</td>
+                          <td class="w-50">
+                            <span class="icons icons--w--md text-right">
+                              <a href="#">
+                                <span class="icon icon--create"></span>
+                              </a>
+                              <a href="#">
+                                <span class="icon icon--bubble ml-2"></span>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small text-center text-danger">
+                          <td class="w-25">-0.412 кг</td>
+                          <td class="w-25 table-cell-no-delimiter">-11 дней</td>
+                          <td class="w-50">
+                            <span class="icons icons--w--md text-right">
+                              <a href="#">
+                                <span class="icon icon--create"></span>
+                              </a>
+                              <a href="#">
+                                <span class="icon icon--bubble ml-2"></span>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="table-row-no-gutters table-row-bordered table-row-small text-center text-primary">
+                          <td class="w-25">-0.412 кг</td>
+                          <td class="w-25 table-cell-no-delimiter">-11 дней</td>
+                          <td class="w-50">
+                            <span class="icons icons--w--md text-right">
+                              <a href="#">
+                                <span class="icon icon--create"></span>
+                              </a>
+                              <a href="#">
+                                <span class="icon icon--bubble ml-2"></span>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td colspan="5" class="pt-0 pb-1"></td></tr>
+              </tbody>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -2,29 +2,44 @@
 
 // Color system
 
-// $grays: ();
+$grays: (
+  '100' : rgb(242, 242, 242),
+  '300' : rgb(221, 221, 221),
+  '500' : rgb(183, 183, 183),
+  '600' : rgb(157, 157, 157),
+  '700' : rgb(74, 76, 82),
+);
 
-// $primary:       $blue;
-// $secondary:     $gray-600;
+$primary:        #0077b3;
+$secondary:      #e5f0f6;
 // $success:       $green;
 // $info:          $cyan;
 // $warning:       $yellow;
-// $danger:        $red;
-// $light:         $gray-100;
-// $dark:          $gray-800;
+$danger:         #d85f5c;
+$light:          white;
+$dark:           black;
+
 
 // $theme-colors: ();
+
+$colors: (
+  "blue":       #4e6ecc,
+  "pink":       #d683ee,
+  "red":        #e95959,
+  "cyan":       #72bed8,
+  "cornflower":   #8a96d9,
+);
 
 // $theme-color-interval:      8%;
 
 // $yiq-contrasted-threshold:  150;
-// $yiq-text-dark:             $gray-900;
+$yiq-text-dark:             $primary;
 // $yiq-text-light:            $white;
 
 // Options
 
 // $enable-caret:              true;
-// $enable-rounded:            true;
+$enable-rounded:            false;
 // $enable-shadows:            false;
 // $enable-gradients:          false;
 // $enable-transitions:        true;
@@ -34,73 +49,77 @@
 
 // Spacing
 
-// $spacer: 1rem;
-// $spacers: (
-//   0: 0,
-//   1: ($spacer * .25),
-//   2: ($spacer * .5),
-//   3: $spacer,
-//   4: ($spacer * 1.5),
-//   5: ($spacer * 3)
-// );
+$spacer: 1rem * $cc;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: 3.5rem * $cc,
+  7: 8rem * $cc
+);
 
-// $sizes: (
+$sizes: (
 //   25: 25%,
 //   50: 50%,
 //   75: 75%,
 //   100: 100%,
 //   auto: auto
-// );
+  33: 33.3333%,
+  66: 66.6666%,
+);
 
 // Body
 
-// $body-bg:                   $white;
-// $body-color:                $gray-900;
+$body-bg:    rgb(242, 242, 242);
+$body-color: rgb(77, 77, 77);
 
 // Links
 
 // $link-color:                theme-color("primary");
 // $link-decoration:           none;
 // $link-hover-color:          darken($link-color, 15%);
-// $link-hover-decoration:     underline;
+$link-hover-decoration:     none;
 
 // Paragraphs
 
-// $paragraph-margin-bottom:   1rem;
+$paragraph-margin-bottom:   0.3125rem * $cc; // 5px
 
 // Grid
 //
 // $grid-breakpoints map $container-max-widths map are not adding to the original maps but overrides the whole ones
 //
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px
-// );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 984px,
+  md: 1326px,
+  lg: 1560px,
+  xl: 1800px,
+);
 //
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px
-// );
+$container-max-widths: (
+  sm: 940px,
+  md: 1280px,
+  lg: 1520px,
+  xl: 1760px,
+);
 //
 // $grid-columns:                12;
-// $grid-gutter-width:           30px;
+$grid-gutter-width:           10px * $cc;
 
 // Components
 
-// $line-height-lg:              1.5;
-// $line-height-sm:              1.5;
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
 
 // $border-width:                1px;
-// $border-color:                $gray-300;
+$border-color:                white;
 
-// $border-radius:               .25rem;
-// $border-radius-lg:            .3rem;
-// $border-radius-sm:            .2rem;
+$border-radius:               .25rem * $cc;
+$border-radius-lg:            .3rem * $cc;
+$border-radius-sm:            .2rem * $cc;
 
 // $box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
 // $box-shadow:                  0 .5rem 1rem rgba($black, .15);
@@ -117,34 +136,34 @@
 
 // Fonts
 
-// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif:         "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 // $font-family-base:            $font-family-sans-serif;
 
-// $font-size-base:              1rem;
-// $font-size-lg:                ($font-size-base * 1.25);
-// $font-size-sm:                ($font-size-base * .875);
+$font-size-base:              1.125rem * $cc; // 18px
+$font-size-sm:                0.875rem * $cc; // 14px
+$font-size-lg:                1.5rem * $cc; // 24px
 
-// $font-weight-lighter:         lighter;
+$font-weight-lighter:         100;
 // $font-weight-light:           300;
 // $font-weight-normal:          400;
-// $font-weight-bold:            700;
+$font-weight-bold:            500;
 // $font-weight-bolder:          bolder;
 
 // $font-weight-base:            $font-weight-normal;
 // $line-height-base:            1.5;
 
-// $h1-font-size:                $font-size-base * 2.5;
-// $h2-font-size:                $font-size-base * 2;
-// $h3-font-size:                $font-size-base * 1.75;
-// $h4-font-size:                $font-size-base * 1.5;
-// $h5-font-size:                $font-size-base * 1.25;
-// $h6-font-size:                $font-size-base;
+$h1-font-size:                 2.25rem * $cc; // 36px
+$h2-font-size:                 2rem * $cc; // 32px
+$h3-font-size:                 1.75rem * $cc; // 28px
+$h4-font-size:                 1.5rem * $cc; // 24px
+$h5-font-size:                 1.375rem * $cc; // 22px
+$h6-font-size:                 1.25rem * $cc; // 20px
 
-// $headings-margin-bottom:      ($spacer / 2);
+$headings-margin-bottom:      0.3125rem * $cc; // 5px
 // $headings-font-family:        inherit;
-// $headings-font-weight:        500;
-// $headings-line-height:        1.2;
+$headings-font-weight:        400;
+$headings-line-height:        1.2;
 // $headings-color:              inherit;
 
 // $display1-size:               6rem;
@@ -163,7 +182,7 @@
 
 // $small-font-size:             80%;
 
-// $text-muted:                  $gray-600;
+$text-muted:                  #aaaaaa;
 
 // $blockquote-small-color:      $gray-600;
 // $blockquote-small-font-size:  $small-font-size;
@@ -187,16 +206,19 @@
 
 // Tables
 
-// $table-cell-padding:          .75rem;
+$table-cell-padding-y:        .625rem * $cc;
+$table-cell-padding-x:        1.875rem * $cc;
+
+$table-cell-padding:          $table-cell-padding-y $table-cell-padding-x;
 // $table-cell-padding-sm:       .3rem;
 
 // $table-bg:                    transparent;
-// $table-accent-bg:             rgba($black, .05);
-// $table-hover-bg:              rgba($black, .075);
+$table-accent-bg:             #f2f2f2;
+$table-hover-bg:              darken(#f2f2f2, 5%);
 // $table-active-bg:             $table-hover-bg;
 
-// $table-border-width:          $border-width;
-// $table-border-color:          $gray-300;
+$table-border-width:          1px;
+$table-border-color:          #72bed8;
 
 // $table-head-bg:               $gray-200;
 // $table-head-color:            $gray-700;
@@ -213,22 +235,22 @@
 
 // Buttons and forms
 
-// $input-btn-padding-y:         .375rem;
-// $input-btn-padding-x:         .75rem;
+$input-btn-padding-y:         .75rem * $cc;
+$input-btn-padding-x:         1.5rem * $cc;
 // $input-btn-font-size:         $font-size-base;
-// $input-btn-line-height:       $line-height-base;
+$input-btn-line-height:       1;
 
 // $input-btn-focus-width:       .2rem;
 // $input-btn-focus-color:       rgba($component-active-bg, .25);
 // $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
-// $input-btn-padding-y-sm:      .25rem;
-// $input-btn-padding-x-sm:      .5rem;
+$input-btn-padding-y-sm:      .25rem * $cc;
+$input-btn-padding-x-sm:      .5rem * $cc;
 // $input-btn-font-size-sm:      $font-size-sm;
 // $input-btn-line-height-sm:    $line-height-sm;
 
-// $input-btn-padding-y-lg:      .5rem;
-// $input-btn-padding-x-lg:      1rem;
+$input-btn-padding-y-lg:      .5rem * $cc;
+$input-btn-padding-x-lg:      1rem * $cc;
 // $input-btn-font-size-lg:      $font-size-lg;
 // $input-btn-line-height-lg:    $line-height-lg;
 
@@ -239,7 +261,7 @@
 // $btn-padding-y:               $input-btn-padding-y;
 // $btn-padding-x:               $input-btn-padding-x;
 // $btn-font-size:               $input-btn-font-size;
-// $btn-line-height:             $input-btn-line-height;
+$btn-line-height:             $input-btn-line-height;
 
 // $btn-padding-y-sm:            $input-btn-padding-y-sm;
 // $btn-padding-x-sm:            $input-btn-padding-x-sm;
@@ -264,7 +286,7 @@
 
 // $btn-block-spacing-y:         .5rem;
 
-// $btn-border-radius:           $border-radius;
+$btn-border-radius:           .5rem * $cc;
 // $btn-border-radius-lg:        $border-radius-lg;
 // $btn-border-radius-sm:        $border-radius-sm;
 
@@ -290,11 +312,11 @@
 // $input-font-size-lg:                    $input-btn-font-size-lg;
 // $input-line-height-lg:                  $input-btn-line-height-lg;
 
-// $input-bg:                              $white;
+$input-bg:                              $secondary;
 // $input-disabled-bg:                     $gray-200;
 
-// $input-color:                           $gray-700;
-// $input-border-color:                    $gray-400;
+$input-color:                           darken($primary, 15%);
+$input-border-color:                    transparent;
 // $input-border-width:                    $input-btn-border-width;
 // $input-box-shadow:                      inset 0 1px 1px rgba($black, .075);
 
@@ -308,7 +330,7 @@
 // $input-focus-width:                     $input-btn-focus-width;
 // $input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
-// $input-placeholder-color:               $gray-600;
+$input-placeholder-color:               $primary;
 // $input-plaintext-color:                 $body-color;
 
 // $input-height-border:                   $input-border-width * 2;
@@ -324,16 +346,16 @@
 
 // $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
-// $form-text-margin-top:                  .25rem;
+$form-text-margin-top:                  .25rem * $cc;
 
-// $form-check-input-gutter:               1.25rem;
-// $form-check-input-margin-y:             .3rem;
-// $form-check-input-margin-x:             .25rem;
+$form-check-input-gutter:               1.25rem * $cc;
+$form-check-input-margin-y:             .3rem * $cc;
+$form-check-input-margin-x:             .25rem * $cc;
 
-// $form-check-inline-margin-x:            .75rem;
-// $form-check-inline-input-margin-x:      .3125rem;
+$form-check-inline-margin-x:            .75rem * $cc;
+$form-check-inline-input-margin-x:      .3125rem * $cc;
 
-// $form-group-margin-bottom:              1rem;
+$form-group-margin-bottom:              1rem * $cc;
 
 // $input-group-addon-color:               $input-color;
 // $input-group-addon-bg:                  $gray-200;

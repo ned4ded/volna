@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "dashboard",
+    "ref" : "index.html",
+    "name" : "dashboard",
+    "icon" : "piechart"
+  },
+  {
+    "id" : "groups",
+    "ref" : "index.html",
+    "name" : "группы",
+    "icon" : "users"
+  },
+  {
+    "id" : "salespoints",
+    "ref" : "index.html",
+    "name" : "точки продажи",
+    "icon" : "piechart-filled"
+  },
+  {
+    "id" : "machines",
+    "ref" : "index.html",
+    "name" : "аппараты",
+    "icon" : "computer"
+  },
+  {
+    "id" : "competitors",
+    "ref" : "index.html",
+    "name" : "конкуренты",
+    "icon" : "fish"
+  },
+  {
+    "id" : "download",
+    "ref" : "index.html",
+    "name" : "загрузить",
+    "icon" : "download"
+  },
+  {
+    "id" : "settings",
+    "ref" : "index.html",
+    "name" : "настройки",
+    "icon" : "settings"
+  },
+  {
+    "id" : "orders",
+    "ref" : "index.html",
+    "name" : "заказы",
+    "icon" : "orders"
+  },
+  {
+    "id" : "map",
+    "ref" : "index.html",
+    "name" : "карта",
+    "icon" : "map"
+  },
+  {
+    "id" : "profile",
+    "ref" : "index.html",
+    "name" : "профиль",
+    "icon" : "profile"
+  },
+  {
+    "id" : "exit",
+    "ref" : "index.html",
+    "name" : "выход",
+    "icon" : "logout"
+  }
+]

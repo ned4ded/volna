@@ -1,0 +1,279 @@
+.table {
+  $gutters: (
+    'xs' : (0.25rem * $cc, 0.25rem * $cc, 85%),
+    'sm' : ($table-cell-padding-y * 0.75, $table-cell-padding-x * 0.75, 90%),
+    'md' : ($table-cell-padding-y * 0.5, $table-cell-padding-x * 0.5, 95%),
+    'default' : ($table-cell-padding-y, $table-cell-padding-x, 100%),
+  );
+
+  th, td {
+    padding-top: $table-cell-padding-y * 0.5;
+    padding-right: $table-cell-padding-x * 0.5;
+    padding-bottom: $table-cell-padding-y * 0.5;
+    padding-left: $table-cell-padding-x * 0.5;
+  }
+
+  @mixin fluid {
+    th,
+    td {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .table {
+    background-color: transparent;
+    height: 100%;
+  }
+
+  @include fluid;
+
+  th {
+    font-weight: normal;
+  }
+
+  th,
+  td {
+    position: relative;
+
+    border-top: none;
+    border-bottom: $table-border-width solid $table-border-color;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      display: block;
+
+      width: $table-border-width;
+      height: calc(100% - #{$table-cell-padding-y} * 2);
+
+      content: '';
+      transform: translateY(-50%);
+
+      background-color: $table-border-color;
+    }
+
+    &:last-child:after { display: none; }
+  }
+
+  thead th {
+    border-bottom-width: $table-border-width;
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom-width: 0;
+  }
+
+  &-borderless {
+    th,
+    td,
+    thead th,
+    tbody + tbody {
+      border: 0;
+    }
+  }
+
+  &-no-delimiters {
+    th,
+    td {
+      &:after {display: none;}
+    }
+  }
+
+  &-gutters {
+    th, td {
+      &:first-child {
+        padding-left: $box-gutters-x;
+      }
+
+      &:last-child {
+        padding-right:  $box-gutters-x;
+      }
+    }
+
+    &-box {
+      width: calc(100% + #{$box-gutters-x} * 2);
+      margin-right: -$box-gutters-x;
+      margin-left: -$box-gutters-x;
+
+      th, td {
+        &:first-child {
+          padding-left: $box-gutters-x;
+        }
+
+        &:last-child {
+          padding-right:  $box-gutters-x;
+        }
+      }
+    }
+  }
+
+  &.small {
+    @include fluid;
+
+    th, td {
+      padding-top: $table-cell-padding-y * 0.5;
+      padding-right: $table-cell-padding-x * 0.5;
+      padding-bottom: $table-cell-padding-y * 0.5;
+      padding-left: $table-cell-padding-x * 0.5;
+    }
+  }
+
+  &-narrow {
+    td, th {
+      line-height: 1;
+    }
+  }
+
+  @each $size, $value in $gutters {
+    $y: nth($value, 1);
+    $x: nth($value, 2);
+    $fz: nth($value, 3);
+
+    @each $bp in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($bp) {
+        $infix: breakpoint-infix($bp, $grid-breakpoints);
+
+        &#{$infix}-#{$size} {
+
+          th, td {
+            padding: $y $x;
+            font-size: $fz;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-row {
+  @mixin fluid {
+    & > th,
+    & > td {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include fluid;
+
+  &-borderless {
+    & > th,
+    & > td {
+      border: 0;
+    }
+  }
+
+  &-bordered {
+    & > th,
+    & > td {
+      border-bottom: $table-border-width solid $table-border-color;
+    }
+  }
+
+  &-no-delimiters {
+    & > th,
+    & > td {
+      &:after {display: none;}
+    }
+  }
+
+  &-delimiters {
+    & > th,
+    & > td {
+      &:after {display: block;}
+    }
+  }
+
+  &-gutters {
+    & > th,
+    & > td {
+      &:first-child {
+        padding-left: $box-gutters-x;
+      }
+
+      &:last-child {
+        padding-right:  $box-gutters-x;
+      }
+    }
+  }
+
+  &-no-gutters {
+    & > th,
+    & > td {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right:  0;
+      }
+    }
+  }
+
+  &-small {
+    @include fluid;
+
+    & > th,
+    & > td {
+      padding-top: $table-cell-padding-y * 0.5;
+      padding-right: $table-cell-padding-x * 0.5;
+      padding-bottom: $table-cell-padding-y * 0.5;
+      padding-left: $table-cell-padding-x * 0.5;
+    }
+  }
+
+  &-normal {
+    & > th,
+    & > td {
+      padding: $table-cell-padding-y $table-cell-padding-x;
+    }
+  }
+
+  &-narrow {
+    & > th,
+    & > td {
+      line-height: 1;
+    }
+  }
+
+  &-not-narrow {
+    & > th,
+    & > td {
+      line-height: $line-height-base;
+    }
+  }
+}
+
+.text-danger {
+  & > th,
+  & > td {
+    &:after {
+      background-color: theme-color('danger');
+    }
+  }
+}
+
+.table-cell {
+  &-no-delimiter {
+    &:after { display: none !important; }
+  }
+
+  &-no-gutters {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}

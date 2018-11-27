@@ -1,0 +1,19 @@
+.box {
+  width: 100%;
+  height: 100%;
+  padding: (5px * $cc) $box-gutters-x;
+
+  border: solid 1px #dddddd;
+  background-color: #ffffff;
+  box-shadow: 0 0 8.7px 0.3px rgba(67, 67, 67, 0.16);
+
+  &--no-gutters {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__container {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

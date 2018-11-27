@@ -1,0 +1,78 @@
+.manager {
+  $p-x: map-get($spacers, 5);
+
+  display: flex;
+  flex-flow: row wrap;
+
+  margin: 0 #{-$p-x};
+
+  @include bp-up(lg) {
+    flex-wrap: nowrap;
+  }
+
+  &__block {
+    position: relative;
+
+    padding: 0 $p-x;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      display: block;
+
+      width: 1px;
+      height: 86%;
+
+      content: '';
+      transform: translateY(-50%);
+
+      background-color: gray('200');
+    }
+
+
+    &--profile {
+    }
+
+    &--calculator {
+      flex-grow: 1;
+      order: 1;
+
+      width: 100%;
+      margin-top: map-get($spacers, 5);
+
+      @include media-breakpoint-up(lg) {
+        order: 0;
+
+        width: auto;
+        margin-top: 0;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--schedule {
+      flex-basis: 500px * $cc;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__schedule {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: gray('200');
+
+    font-size: rem(30px) * $cc;
+  }
+}
