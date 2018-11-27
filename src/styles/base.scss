@@ -1,20 +1,17 @@
-@import 'fonts/base';
-
+@import 'fonts';
 @import 'variables/base';
-
-@import 'helpers/base';
-
 @import 'bootfix/base';
-
+@import 'helpers/base';
 @import 'vendor/base';
 
+/* COMMON STYLES START */
+
 body {
-  min-width: 1024px;
-  margin: 0;
+
 }
 
-@import 'generated/base.scss';
+/* COMMON STYLES END */
 
-@import 'blocks/base.scss';
-
-@import 'pages/base.scss';
+@import 'generated/base';
+@import 'blocks/base';
+@import 'pages/base';

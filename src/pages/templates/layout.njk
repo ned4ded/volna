@@ -1,4 +1,4 @@
-{% set m = datasets.get('meta.json') %}
+{% set m = datasets.get('meta') %}
 
 <!doctype html>
 <html class="no-js" lang="{{ meta.lang }}">
@@ -21,7 +21,6 @@
   {% block content %} {% endblock %}
 
   <script src="js/vendor.js" charset="utf-8"></script>
-
   <script src="js/main.js" charset="utf-8"></script>
 
 </body>
