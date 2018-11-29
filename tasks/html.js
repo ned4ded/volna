@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import fs from 'fs';
+import path from 'path';
 import config from '../gulpfile.config';
 import engine from 'gulp-nunjucks-render';
 import minify from 'gulp-htmlmin';
@@ -22,10 +23,8 @@ export function html() {
     }),
   ]
 
-  const data = fs.readdirSync(config.paths.datasets).reduce((acc, fileName) => {
-    return { ...acc,
-      [fileName]: require('../' + config.paths.datasets + '/' + fileName)
-    };
+  const data = fs.readdirSync( config.paths.datasets ).reduce( (acc, filename) => {
+    return { ...acc, [ path.basename( filename, '.json') ] : require('../' + config.paths.datasets + '/' + filename) };
   }, {});
 
   data.get = function(name) {
