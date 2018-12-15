@@ -45,10 +45,7 @@ Default project has exact or similar structure:
 ### Datasets
 Contains .json files, which could be used as a data for Nunjucks templates. Loads up automatically after starting gulp.
 
-For example, any data from `datasets/data.json` could be accessed with this construct:
-``` nunjucks
-{% set data = datasets.get('data') %}
-```
+For example, any data from `datasets/data.json` could be accessed with this construct `set data = datasets.get('data')`
 
 ### SVG sprite
 
