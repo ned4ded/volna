@@ -1,14 +1,29 @@
 {% set m = datasets.get('meta') %}
 
 <!doctype html>
-<html class="no-js" lang="{{ meta.lang }}">
+<html class="no-js" lang="{{ m.lang }}">
 
 <head>
-  <meta charset="{{ meta.charset }}">
+  <meta charset="{{ m.charset }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ meta.title }}</title>
-  <meta name="description" content="{{ meta.description }}">
+  <title>{{ m.title }}</title>
+  <meta name="description" content="{{ m.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% if m.og.use == true %}
+  <meta property="og:title" content="{{ m.og.title }}" />
+  <meta property="og:url" content="{{ m.og.url }}" />
+  <meta property="og:site_name" content="{{ m.og.site_name }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ m.og.url + '/assets/imgs/placeholder@1200x630.png' }}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="{{ m.og.descr }}" />
+  {% endif %}
+
+  {% if m.favicon %}
+  <link rel="shortcut icon" href="favicon.ico">
+  {% endif %}
 
   <link rel="stylesheet" href="css/main.css">
 </head>

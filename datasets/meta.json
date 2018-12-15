@@ -2,5 +2,13 @@
   "lang" : "en",
   "charset" : "utf-8",
   "title" : "Placeholder Title",
-  "description" : "description"
+  "description" : "description",
+  "favicon" : false,
+  "og" : {
+    "use" : false,
+    "title" : "OG placeholder title",
+    "url" : "www.og-placeholder-url.com",
+    "site_name" : "og placeholder url",
+    "descr" : "og description"
+  }
 }
