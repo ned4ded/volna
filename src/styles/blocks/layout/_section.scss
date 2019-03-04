@@ -1,0 +1,33 @@
+.section {
+  padding: 55px 28px;
+
+  @include bp-up(lg) {
+    padding: 36px 41px;
+  }
+
+  &_view {
+    &_hero {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+
+      width: 100%;
+      min-height: 100vh;
+
+      background-image: url(../assets/imgs/section-hero-bg@xs.jpg);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: auto 100%;
+
+      @include bp-up(lg) {
+        background-image: url(../assets/imgs/section-hero-bg.jpg);
+        background-size: cover;
+      }
+
+      @include bp-up(2xl) {
+        background-image: url(../assets/imgs/section-hero-bg@2xl.jpg);
+        background-size: cover;
+      }
+    }
+  }
+}

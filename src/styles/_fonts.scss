@@ -1,8 +1,27 @@
-// Example:
-// 
+@font-face {
+	font-family: 'Azonix';
+	src: local('Azonix Regular'), local('Azonix-Regular'), local('Azonix'), url('../assets/fonts/Azonix-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: local('Montserrat Regular'), local('Montserrat-Regular'), local('Montserrat'), url('../assets/fonts/Montserrat-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SFDisplay';
+	src: local('SFDisplay Thin'), local('SFDisplay-Thin'), local('SFDisplay'), url('../assets/fonts/SFDisplay-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
+//
 // @font-face {
-// 	font-family: 'Proxima Nova';
-// 	src: local('Proxima Nova Regular'), local('ProximaNova-Regular'), local('Proxima Nova'), local('ProximaNova'), url('../assets/fonts/ProximaNova-Regular.woff') format('woff');
-// 	font-weight: 400;
+// 	font-family: 'SFDisplay';
+// 	src: local('SFDisplay Ultralight'), local('SFDisplay-Ultralight'), local('SFDisplay'), url('../assets/fonts/SFDisplay-Ultralight.woff') format('woff');
+// 	font-weight: 100;
 // 	font-style: normal;
 // }

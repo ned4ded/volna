@@ -72,20 +72,22 @@
 //
 // $grid-breakpoints map $container-max-widths map are not adding to the original maps but overrides the whole ones
 //
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px
-// );
-//
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px
-// );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1370px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  2xl: 1285px
+);
 //
 // $grid-columns:                12;
 // $grid-gutter-width:           30px;
