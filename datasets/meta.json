@@ -1,14 +1,14 @@
 {
   "lang" : "en",
   "charset" : "utf-8",
-  "title" : "Placeholder Title",
-  "description" : "description",
+  "title" : "V O L N A . S T U D I O",
+  "description" : "We design wide-range visual solutions, striving to bring innovation and embody the most daring ideas. We are fully committed to practicality and perception and looking for a perfection in each detail of any project.",
   "favicon" : false,
   "og" : {
-    "use" : false,
-    "title" : "OG placeholder title",
-    "url" : "www.og-placeholder-url.com",
-    "site_name" : "og placeholder url",
-    "descr" : "og description"
+    "use" : true,
+    "title" : "V O L N A . S T U D I O",
+    "url" : "//volna.studio",
+    "site_name" : "volna.studio",
+    "descr" : "We design wide-range visual solutions, striving to bring innovation and embody the most daring ideas. We are fully committed to practicality and perception and looking for a perfection in each detail of any project."
   }
 }

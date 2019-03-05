@@ -21,13 +21,15 @@
   <meta property="og:description" content="{{ m.og.descr }}" />
   {% endif %}
 
+  <meta name="yandex-verification" content="1cd4d1a640b9023c" />
+
   {% if m.favicon %}
   <link rel="shortcut icon" href="favicon.ico">
   {% endif %}
 
   <link rel="stylesheet" href="css/main.css">
 </head>
-
+{# translate3d 0 10 0 #}
 <body>
   <!--[if lte IE 9]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -36,7 +38,7 @@
   {% block content %} {% endblock %}
 
   {# <script src="js/vendor.js" charset="utf-8"></script> #}
-  {# <script src="js/main.js" charset="utf-8"></script> #}
+  <script src="js/main.js" charset="utf-8"></script>
 
 </body>
 

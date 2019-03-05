@@ -59,6 +59,8 @@
     height: 34vh;
     padding: $spacing-y $spacing-x;
 
+    overflow: hidden;
+
     @include bp-up(lg) {
       height: 41.7vh;
     }
@@ -190,7 +192,11 @@
 
     text-align: center;
 
+    overflow: hidden;
+
     &-link {
+      display: inline-block;
+
       letter-spacing: 1.5px;
 
       color: rgba(#c8c8c8, .8);
@@ -209,6 +215,24 @@
 
         font-size: 19px;
       }
+    }
+  }
+}
+
+.no-js {
+  .hero {
+    &__heading {
+      opacity: 1 !important;
+    }
+
+    &__features li {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    &__address-link {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) !important;
     }
   }
 }
