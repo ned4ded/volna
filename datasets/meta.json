@@ -1,13 +1,13 @@
 {
   "lang" : "en",
   "charset" : "utf-8",
-  "title" : "V O L N A . S T U D I O",
+  "title" : "VOLNA.STUDIO",
   "description" : "We design wide-range visual solutions, striving to bring innovation and embody the most daring ideas. We are fully committed to practicality and perception and looking for a perfection in each detail of any project.",
-  "favicon" : false,
+  "favicon" : true,
   "og" : {
     "use" : true,
-    "title" : "V O L N A . S T U D I O",
-    "url" : "//volna.studio",
+    "title" : "VOLNA.STUDIO",
+    "url" : "http://volna.studio",
     "site_name" : "volna.studio",
     "descr" : "We design wide-range visual solutions, striving to bring innovation and embody the most daring ideas. We are fully committed to practicality and perception and looking for a perfection in each detail of any project."
   }

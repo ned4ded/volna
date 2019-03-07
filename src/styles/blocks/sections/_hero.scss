@@ -5,7 +5,8 @@
 
   &__heading {
     $spacer: 34px;
-    $spacer-lg: 149px;
+    $spacer-lg: 10.9vw;
+    // $spacer-lg: 149px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -19,7 +20,8 @@
     @include bp-up(lg) {
       margin-bottom: 3px;
 
-      font-size: 79px;
+      font-size: 5.78vw;
+      // font-size: 79px;
     }
 
     & span {
@@ -52,7 +54,8 @@
     $spacing-x: 29px;
     $spacing-y: 4px;
 
-    $spacing-x-lg: 50px;
+    $spacing-x-lg: 3.66vw;
+    // $spacing-x-lg: 50px;
     $spacing-y-lg: 0;
 
     min-height: 100%;
@@ -63,10 +66,6 @@
 
     @include bp-up(lg) {
       height: 41.7vh;
-    }
-
-    @include bp-up(2xl) {
-      height: 51vh;
     }
 
     ul {
@@ -90,8 +89,10 @@
 
     li {
       $fz: 16px;
-      $fz-lg: 24px;
+      $fz-lg: 1.75vw;
+      // $fz-lg: 24px;
       $delimiter-w: 1px;
+      $delimiter-w-lg: 0.07vw;
 
       @mixin delimiter {
         &:after {
@@ -144,7 +145,7 @@
         @include delimiter;
 
         @include bp-up(lg) {
-          padding-right: $spacing-x-lg + $delimiter-w;
+          padding-right: $spacing-x-lg + $delimiter-w-lg;
           padding-left: $spacing-x-lg;
         }
       }
@@ -153,7 +154,7 @@
         padding-right: 0;
 
         @include bp-up(lg) {
-          padding-right: $spacing-x-lg + $delimiter-w;
+          padding-right: $spacing-x-lg + $delimiter-w-lg;
 
           @include delimiter;
         }
@@ -173,7 +174,7 @@
         margin: 0 5px;
 
         @include bp-up(lg) {
-          margin: 0 8.5px;
+          margin: 0 0.62vw;
         }
 
         &:first-child {
@@ -210,10 +211,12 @@
       }
 
       @include bp-up(lg) {
+        letter-spacing: 0.11vw;
+
         color: rgba(#c8c8c8, .7);
         text-shadow: 0 0 12px rgba(22, 21, 21, 0.57);
 
-        font-size: 15.5px;
+        font-size: 1.135vw;
       }
     }
   }

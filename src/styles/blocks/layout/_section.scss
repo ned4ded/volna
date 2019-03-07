@@ -17,7 +17,8 @@
       background-image: url(../assets/imgs/section-hero-bg@xs.jpg);
       background-repeat: no-repeat;
       background-position: center bottom;
-      background-size: auto 100%;
+      background-size: cover;
+      // background-size: auto 100%;
 
       @include bp-up(lg) {
         background-image: url(../assets/imgs/section-hero-bg.jpg);
@@ -26,7 +27,6 @@
 
       @include bp-up(2xl) {
         background-image: url(../assets/imgs/section-hero-bg@2xl.jpg);
-        background-size: cover;
       }
     }
   }

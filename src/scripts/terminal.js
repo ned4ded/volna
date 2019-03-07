@@ -1,4 +1,9 @@
 (() => {
+  const Params = {
+    START_DELAY: 500,
+    FEATURES_DELAY: 1200,
+  }
+
   const Selectors = {
     HERO_HEADING: '.hero__heading',
     HERO_FEATURES: '.hero__features ul li',
@@ -10,7 +15,7 @@
       opacity: 0,
     },
     HEADING_PROC: {
-      transition: 'opacity 1s ease-in',
+      transition: 'opacity 1.5s ease-in',
       opacity: 1,
     },
     FEATURES_START: {
@@ -18,18 +23,16 @@
       transform: 'translate3d(0, 15px, 0)'
     },
     FEATURES_PROC: {
-      transition: ['opacity 0.2s ease-in', 'transform 0.7s ease-out'],
+      transition: ['opacity 0.2s ease-in', 'transform 1.2s ease-out'],
       opacity: 1,
       transform: 'translate3d(0, 0, 0)'
     },
     ADDRESS_START: {
       opacity: 0,
-      transform: 'translate3d(0, 15px, 0)'
     },
     ADDRESS_PROC: {
-      transition: ['opacity 0.2s ease-in', 'transform 0.7s ease-out'],
+      transition: 'opacity 1.2s ease-in',
       opacity: 1,
-      transform: 'translate3d(0, 0, 0)'
     },
   }
 
@@ -95,11 +98,15 @@
     }
 
     window.addEventListener('load', function() {
-      animateHeading(
-        () => animateFeatures(
-          animateAddress
+      setTimeout(() => {
+        animateHeading(
+          () => setTimeout(() => {
+            animateFeatures(
+              animateAddress
+            )
+          }, Params.FEATURES_DELAY)
         )
-      )
+      }, Params.START_DELAY)
     })
   })
 })()
