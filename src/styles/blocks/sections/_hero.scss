@@ -3,6 +3,8 @@
   $fallback-color: #fefefe;
   $dark-color: #bfcad7;
 
+  position: relative;
+
   &__heading {
     $spacer: 34px;
     $spacer-lg: 10.9vw;
@@ -16,6 +18,8 @@
 
     font-family: $ff-azon;
     font-size: 47px;
+
+    z-index: 1;
 
     @include bp-up(lg) {
       margin-bottom: 3px;
@@ -194,6 +198,8 @@
     text-align: center;
 
     overflow: hidden;
+
+    z-index: 1;
 
     &-link {
       display: inline-block;

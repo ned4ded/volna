@@ -12,6 +12,10 @@ let wpConfig = {
   module: {
     rules: [
       {
+        test: /\.glsl$/,
+        loader: 'webpack-glsl-loader'
+      },
+      {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {

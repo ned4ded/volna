@@ -1,7 +1,8 @@
+import './bg-tilting.js'
+
 (() => {
   const Params = {
     START_DELAY: 500,
-    FEATURES_DELAY: 1200,
   }
 
   const Selectors = {
@@ -100,11 +101,11 @@
     window.addEventListener('load', function() {
       setTimeout(() => {
         animateHeading(
-          () => setTimeout(() => {
+          () => {
             animateFeatures(
               animateAddress
             )
-          }, Params.FEATURES_DELAY)
+          }
         )
       }, Params.START_DELAY)
     })

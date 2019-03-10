@@ -33,6 +33,7 @@
     "postcss-preset-env": "^6.6.0",
     "undertaker-registry": "^1.0.1",
     "webpack": "^4.29.6",
+    "webpack-glsl-loader": "^1.0.1",
     "webpack-stream": "^5.2.1",
     "xmldom": "^0.1.27"
   }
