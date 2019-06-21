@@ -201,19 +201,38 @@
 
     z-index: 1;
 
+    @keyframes address {
+      to {
+        background-position: 0 50%;
+      }
+    }
+
     &-link {
+      $bg-color: #797878;
+
       display: inline-block;
 
       letter-spacing: 1.5px;
 
-      color: rgba(#c8c8c8, .8);
-      text-shadow: 0 0 4px rgba(22, 21, 21, 0.57);
+      color: rgba(#c8c8c8, 1);
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: .05px darken($bg-color, 50%);
 
       font-family: $ff-mont;
       font-size: 15px;
 
+      background: linear-gradient(to left, $bg-color, $bg-color 48%, white 50%, $bg-color 52%, $bg-color);
+      background-clip: text;
+      background-size: 100% 200%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 300% 100%;
+      background-position: 100% 50%;
+      animation: address 4.5s linear 0s infinite;
+
       &:hover {
         color: rgba($color, .8);
+        -webkit-text-fill-color: inherit;
       }
 
       @include bp-up(lg) {
