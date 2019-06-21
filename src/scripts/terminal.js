@@ -8,7 +8,7 @@ import './bg-tilting.js'
   const Selectors = {
     HERO_HEADING: '.hero__heading',
     HERO_FEATURES: '.hero__features ul li',
-    HERO_ADDRESS: '.hero__address-link',
+    HERO_ADDRESS: '.hero__address',
   }
 
   const Styles = {

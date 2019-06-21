@@ -208,7 +208,8 @@
     }
 
     &-link {
-      $bg-color: #c4c1c1;
+      $bg-color: white;
+      $bg-accent: #c4c1c1;
 
       display: inline-block;
 
@@ -221,7 +222,7 @@
       font-family: $ff-mont;
       font-size: 15px;
 
-      background: linear-gradient(to left, $bg-color, $bg-color 48%, white 50%, $bg-color 52%, $bg-color);
+      background: linear-gradient(to left, $bg-color, $bg-color 48%, $bg-accent 50%, $bg-color 52%, $bg-color);
       background-clip: text;
       background-size: 100% 200%;
       background-position: 50% 50%;
