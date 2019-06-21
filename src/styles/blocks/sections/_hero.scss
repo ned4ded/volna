@@ -233,6 +233,7 @@
       &:hover {
         color: rgba($color, .8);
         -webkit-text-fill-color: inherit;
+        text-decoration-color: rgba($color, .8);
       }
 
       @include bp-up(lg) {
