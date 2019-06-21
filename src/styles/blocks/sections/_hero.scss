@@ -209,15 +209,14 @@
 
     &-link {
       $bg-color: white;
-      $bg-accent: #c4c1c1;
+      $bg-accent: #dddddd;
 
       display: inline-block;
 
       letter-spacing: 1.5px;
 
-      color: rgba(#c8c8c8, 1);
+      color: rgba($color, 1);
       -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: .05px darken($bg-color, 50%);
 
       font-family: $ff-mont;
       font-size: 15px;
@@ -232,8 +231,7 @@
       animation: address 4.5s linear 0s infinite;
 
       &:hover {
-        color: rgba($color, .8);
-        -webkit-text-fill-color: inherit;
+        animation: none;
         text-decoration-color: rgba($color, .8);
       }
 
